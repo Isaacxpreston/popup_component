@@ -12,8 +12,21 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  /*background: lightgrey;*/
   overflow: hidden; 
+  animation: show-wrapper 0.25s linear;
+}
+
+.wrapper-hidden {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden; 
+  animation: hide-wrapper 0.25s linear forwards;
 }
 
 .header {
@@ -46,13 +59,14 @@ body {
   position: absolute;
   padding: 10px;
   top: 80px;
+  animation-delay: 0.25s
 }
 
 #second {
   position: absolute;
   top: 230px;
   padding: 10px;
-  animation-delay: 0.5s;
+  animation-delay: 0.75s;
 }
 
 .content {
@@ -86,8 +100,12 @@ body {
   width: 50%;
 }
 
+#loader-one {
+  animation-delay: 0.25s
+}
+
 #loader-two {
-  animation-delay: 0.5s
+  animation-delay: 0.75s
 }
 
 .percent-bar {
@@ -120,5 +138,30 @@ body {
   }
   to {
     width: 100%
+  }
+}
+
+@keyframes show-wrapper {
+  0% {
+    opacity: 0;
+    transform: scale(0.1)
+  }
+  10% {
+    opacity: 1;
+    transform: scale(0.5)
+  }
+  100% {
+    transform: scale(1)
+  }
+}
+
+@keyframes hide-wrapper {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.001)
   }
 }
