@@ -1,0 +1,279 @@
+			body {
+				/*background: #020a7a;*/
+				color: white;
+				overflow: hidden;
+				font-family: 'Lato', sans-serif;
+			}
+
+			body.normalBg {
+				background-color: #020a7a;
+				animation: zoomBgOut linear 0.1s;
+			}
+
+			body.zoomBg {
+				background-color: #000058;
+				animation: zoomBgIn linear 0.5s;
+			}
+
+			@keyframes zoomBgIn {
+				from {
+					background-color: #020a7a;
+				}
+				to {
+					background-color: #000058;
+				}
+			}
+
+			@keyframes zoomBgOut {
+				from {
+					background-color: #000058;
+				}
+				to {
+					background-color: #020a7a;
+				}
+			}
+
+			a:link {
+				text-decoration: none
+			}
+
+			a:visited {
+				color: white
+			}
+
+			.landing-header {
+				font-size: 72px;
+			}
+
+			.landing-content {
+				position: absolute;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 100px;
+				left: 0;
+				right: 0;
+				top: 15%;
+				opacity: 1;
+				width: 800px;
+				z-index: 300;
+				text-align: center;
+			}
+
+			.landing-bg {
+				position: absolute;
+				margin-left: auto;
+				margin-right: auto;
+				left: 0;
+				right: 0;
+				top: 15%;
+				background: #020a7a;
+				border: 1px solid white;
+				opacity: 0.5;
+				width: 800px;
+				height: 500px;
+				z-index: 300;
+				animation: hoverOpacityOut linear 2s
+			}
+
+			.landing-bg:hover {
+				opacity: 0.9;
+				animation: hoverOpacity linear 2s
+			}
+
+			@keyframes hoverOpacity {
+				from {
+					opacity: 0.5
+				}
+				to {
+					opacity: 0.9
+				}
+			}
+
+			@keyframes hoverOpacityOut {
+				from {
+					opacity: 0.9
+				}
+				to {
+					opacity: 0.5
+				}
+			}
+
+			#mouseFollow {
+				position: absolute;
+				z-index: 120;
+				font-size: 25px;
+			}
+
+			#currentPersonalitySearch {
+				position: absolute;
+				left: 45%;
+				font-size: 50px;
+				z-index: 100
+			}
+
+			.float-right{
+				position: absolute;
+				top: 5px;
+				right: 275px;
+			}
+
+			.inputPersonality {
+				position: absolute;
+				top: 2.5px;
+				right: 15px;
+				font-size: 24px;
+				background: #020a7a;
+				border: 1px solid white;
+				user-select: none;
+				color: white;
+				z-index: 100;
+			}
+
+			.inputPersonality:focus {
+    		outline: none;
+			}
+			.inputPersonality:hover {
+				border: 1px solid black;
+				background: white;
+				color: black;
+			}
+
+			.inputPersonality2 {
+				height: 100px;
+				width: 300px;
+				font-size: 100px;
+				text-align: center;
+				background: none;
+				border: 1px solid white;
+				user-select: none;
+				color: white;
+				z-index: 100;
+			}
+
+			.inputPersonality2:focus {
+    		outline: none;
+			}
+
+			.display-hidden-none {
+				display: none;
+				opacity: 0;
+			}
+
+
+			.display-hidden {
+				position: absolute;
+				z-index: 100;
+				opacity: 0;
+				background: #020a7a;
+				padding: 10px;
+				transform: scale(2, 2);
+				animation: hideDispaly linear 0.2s
+			}
+
+			.display {
+				position: absolute;
+				z-index: 100;
+				background: #020a7a;
+				padding: 10px;
+				border: 1px solid black;
+				opacity: 0.8;
+				transform: scale(2, 2);
+				animation: scaleDispaly linear 0.2s
+			}
+
+			@keyframes scaleDispaly {
+				from {
+					opacity: 0;
+					transform: scale(0, 0);
+				}
+				to {
+					opacity: 0.8;
+					transform: scale(2, 2);
+				}
+			}
+
+			@keyframes hideDispaly {
+				from {
+					opacity: 1;
+					transform: scale(2, 2);
+				}
+				to {
+					opacity: 0;
+					transform: scale(0, 0);
+				}
+			}
+
+			.assertive-bar {
+				background: white;
+				height: 15px;
+				width: 100%;
+				animation: loadBar linear 0.5s;
+			}
+
+			.turbulent-bar {
+				background: white;
+				height: 15px;
+				width: 100%;
+				animation: loadBar linear 0.5s;
+			}
+
+			@keyframes loadBar {
+				from {
+					width: 0%
+				}
+				to {
+					width: 100%
+				}
+			}
+
+			.searchBar {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				padding: 5px;
+				background: #020a7a;
+				border-bottom: 1px solid black;
+				font-size: 25px;
+			}
+
+			.searchBar-landing {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 25px;
+				padding: 5px;
+				background: #020a7a;
+				font-size: 25px;
+				z-index: 400
+			}
+
+			.text-copy--stroke {
+				fill: transparent;
+				stroke: white;
+				stroke-width: 0.2;
+				animation: fadeIn 1s ease
+			}
+
+			.r-fill {
+				fill: white;
+				transform-origin: 300px 150px;
+				animation: slide 2s ease;
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0
+				}
+			}
+
+			@keyframes slide {
+				from {
+					opacity: 0.75;
+					transform: translate(-100%)
+				}
+				to {
+					transform: none
+				}
+			}
