@@ -1,10 +1,19 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase
+}
+
 .wrapper {
   height: 400px;
   width: 400px;
+  margin: auto;
   position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   background: grey;
   overflow: hidden; 
-  z-index: 10;
 }
 
 .header {
@@ -51,11 +60,11 @@
 }
 
 .content:hover {
-  color: grey
+  color: darkred
 }
 
 .content:hover .percent-bar > div {
-  background: grey;
+  background: darkred;
 }
 
 #percent-one {
