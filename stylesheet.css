@@ -24,41 +24,81 @@
 
 #first {
   position: absolute;
-  top: 100px;
+  padding: 10px;
+  top: 80px;
 }
 
 #second {
   position: absolute;
-  top: 150px;
-  animation-delay: 1s;
-}
-
-#third {
-  position: absolute;
-  top: 200px;
-  animation-delay: 2s;
+  top: 230px;
+  padding: 10px;
+  animation-delay: 0.5s;
 }
 
 .content {
-  width: 400px;
-  height: 50px;
-  font-size: 2em;
-  text-align: center;
+  width: 380px;
+  height: 150px;
   color: white;
   background: navy;
   z-index: 1;
   opacity: 0;
-  animation: slide-down 1s linear forwards;
+  animation: slide-down 0.5s linear forwards;
   transform-origin: left top
+}
+
+.content > p {
+  font-size: 1.5em
+}
+
+.content:hover {
+  color: grey
+}
+
+.content:hover .percent-bar > div {
+  background: grey;
+}
+
+#percent-one {
+  width: 100%;
+}
+
+#percent-two {
+  width: 50%;
+}
+
+#loader-two {
+  animation-delay: 0.5s
+}
+
+.percent-bar {
+  height: 50px;
+  background: darkred
+}
+
+.percent-loader {
+  height: 100%;
+  background: red;
+  animation: load-percent 0.5s linear forwards;
 }
 
 @keyframes slide-down {
   0% {
-    opacity: 0;
-    transform: scale(0.1)
+    transform: translateY(-150px)
+  }
+  1% {
+    opacity: 1
   }
   100% {
     opacity: 1;
     transform: none
+  }
+}
+
+@keyframes load-percent {
+  from {
+    width: 0%
+  }
+  to {
+    width: 100%
   }
 }
