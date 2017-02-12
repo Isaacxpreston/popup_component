@@ -1,10 +1,8 @@
 			body {
-        background: black;
 				color: white;
-				overflow: hidden;
-				font-family: 'Lato', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase
 			}
-
 
 			a:link {
 				text-decoration: none
@@ -14,40 +12,56 @@
 				color: white
 			}
 
-			.landing-header {
-				font-size: 72px;
-			}
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #00695C;
+        height: 80px;
+        width: 100%;
+        z-index: 2;
+      }
 
-			.landing-content {
+			.wrapper {
 				position: absolute;
 				margin-left: auto;
 				margin-right: auto;
 				margin-top: 100px;
 				left: 0;
 				right: 0;
-				opacity: 1;
-        background: rgba(2,10,122, 0.5);
-        border: 1px solid white;
-        padding-top: 100px;
-        padding-bottom: 100px;
+        overflow: hidden;
 				width: 800px;
-				z-index: 300;
+        height: 300px;
 				text-align: center;
+        animation: show-wrapper 0.25s linear forwards;
 			}
 
-			.inputPersonality2 {
+      .content {
+        background: rgba(128,203,196, 1);
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        height: 180px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        opacity: 0;
+        z-index: 1;
+        animation: slide-down 0.5s linear forwards;
+        animation-delay: 0.25s;
+      }
+
+			.input {
 				height: 100px;
 				width: 300px;
 				font-size: 100px;
 				text-align: center;
-				background: none;
-				border: 1px solid white;
+				background: #26A69A;
+				border: 1px solid transparent;
 				user-select: none;
 				color: white;
-				z-index: 100;
 			}
 
-			.inputPersonality2:focus {
+			.input:focus {
     		outline: none;
 			}
 
@@ -63,12 +77,12 @@
 				transform-origin: 300px 150px;
 				animation: slide 2s ease;
 			}
-
+/*
 			@keyframes fadeIn {
 				from {
 					opacity: 0
 				}
-			}
+			}*/
 
 			@keyframes slide {
 				from {
@@ -79,3 +93,30 @@
 					transform: none
 				}
 			}
+
+			@keyframes show-wrapper {
+				0% {
+					opacity: 0;
+					transform: scale(0.1)
+				}
+				10% {
+					opacity: 1;
+					transform: scale(0.5)
+				}
+				100% {
+					transform: scale(1)
+				}
+			}
+
+      @keyframes slide-down {
+        0% {
+          transform: translateY(-300px)
+        }
+        1% {
+          opacity: 1
+        }
+        100% {
+          opacity: 1;
+          transform: none
+        }
+      }

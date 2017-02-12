@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="landing_styles.css">
 	</head>
 	<body>
-		<div id="landingContent" class="landing-content">
-			<svg viewBox="0 0 200 20">
-				<!-- Symbol with text -->
-				<symbol id="s-text">
-					<text text-anchor="middle"
-								x="50%"
-								y="50%"
-								dy=".35em"
-								class="text--line"
-								>
-						16 Personality Data Map
-					</text>    
-				</symbol>
+		<div class="wrapper">
 
-				<!-- Clippath  with text -->
-				<clippath id="cp-text">
-					<text text-anchor="middle"
-								x="50%"
-								y="50%"
-								dy=".35em"
-								class="text--line"
-								>
-						16 Personality Data Map
-					</text>
-				</clippath>
-				
-				<!-- Group with clippath and with patterned content -->
-				<g clip-path="url(#cp-text)">
-					<rect width="100%" height="100%" class="r-fill"/>
-				</g>
+      <div class="header">
+        <svg viewBox="0 0 200 20">
+          <symbol id="s-text">
+            <text text-anchor="middle"
+                  x="50%"
+                  y="50%"
+                  dy=".35em"
+                  class="text--line"
+                  >
+              landing page
+            </text>    
+          </symbol>
+          <clippath id="cp-text">
+            <text text-anchor="middle"
+                  x="50%"
+                  y="50%"
+                  dy=".35em"
+                  class="text--line"
+                  >
+              landing page
+            </text>
+          </clippath>
+          <g clip-path="url(#cp-text)">
+            <rect width="100%" height="100%" class="r-fill"/>
+          </g>
+          <use xlink:href="#s-text"
+              class="text-copy--stroke"></use>
+        </svg>
+      </div>
 
-				<!-- Copy of text for stroke -->
-				<use xlink:href="#s-text"
-						class="text-copy--stroke"></use>
-			</svg>
-			<br /><br />
-			<form id="myForm2" onSubmit="initRender()">
-				<input class="inputPersonality2" type='text'></input>
-			</form>
-			Enter your personality type
-			<h3><a href="https://www.16personalities.com/free-personality-test">Take the test here</a></h3>
+      <div class="content">
+        <form onSubmit="">
+				  <input class="input" type='text'></input>
+			  </form>
+			  Enter your personality type
+			  <h3><a href="https://www.16personalities.com/free-personality-test">Take the test here</a></h3>
+      </div>
+
 		</div>
 	</body>
 </html>
